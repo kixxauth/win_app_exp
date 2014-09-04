@@ -1,26 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <title>win_app_exp</title>
+    <meta charset="utf-8" />
+    <title>win_app_exp</title>
 
-  <!-- WinJS references -->
-  <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
-  <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
-  <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
-  <!-- win_app_exp references -->
-  <link href="/css/default.css" rel="stylesheet" />
-  <script src="/js/default.js"></script>
+    <!-- win_app_exp references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+    <script src="/js/navigator.js"></script>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <p>What's your name?</p>
-  <input id="name-input" type="text"/>
-  <button id="hello-button">Say "Hello"</button>
-  <div id="greeting-output"></div>
-  <label for="rating-control-div">Rate this greeting:</label>
-  <div id="rating-control-div" data-win-control="WinJS.UI.Rating"></div>
-  <div id="rating-output"></div>
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
+    <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
+    </div> -->
 </body>
 </html>
