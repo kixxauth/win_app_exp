@@ -7,7 +7,17 @@
         // populates the page elements with the app's data.
         ready: function (element, options) {
           console.log('home.js -> page ready');
-          WinJS.Utilities.query('a').listen('click', this.linkClickHandler, false);
+          // WinJS.Utilities.query('a').listen('click', this.linkClickHandler, false);
+
+          // The platform must handle cleanup???
+          // Memory is cleared between pages???
+          $('a').on('click', this.linkClickHandler);
+
+          // Not quite; the intervals just accumulate
+          var intervalId = new Date().getSeconds()
+          setInterval(function () {
+            console.log('interval', intervalId);
+          }, 2000)
         },
 
         linkClickHandler: function (ev) {
