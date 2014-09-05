@@ -2,6 +2,8 @@
 // http://go.microsoft.com/fwlink/?LinkId=232506
 (function () {
     "use strict";
+    console.log(Object.keys(console));
+    console.log('exec default.js');
 
     WinJS.Binding.optimizeBindingReferences = true;
 
@@ -10,6 +12,7 @@
     var nav = WinJS.Navigation;
 
     app.addEventListener("activated", function (args) {
+        console.log('default.js -> application is activated')
         if (args.detail.kind === activation.ActivationKind.launch) {
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
                 // TODO: This application has been newly launched. Initialize
