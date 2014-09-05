@@ -14,10 +14,18 @@
           $('a').on('click', this.linkClickHandler);
 
           // Not quite; the intervals just accumulate
-          var intervalId = new Date().getSeconds()
-          setInterval(function () {
-            console.log('interval', intervalId);
-          }, 2000)
+          // var intervalId = new Date().getSeconds()
+          // setInterval(function () {
+          //   console.log('interval', intervalId);
+          // }, 2000)
+
+          $('#inject-button').on('click', function () {
+            // This is Ok
+            $('.injection-results').html('This is injected in here.')
+
+            // But this is *not* Ok
+            // $('.injection-results').html('<script type="text/javascript">"This is dangerous HTML!";</script>')
+          })
         },
 
         linkClickHandler: function (ev) {
